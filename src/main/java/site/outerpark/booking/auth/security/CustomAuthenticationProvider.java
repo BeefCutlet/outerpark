@@ -29,7 +29,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             throw new BadCredentialsException("비밀번호가 일치하지 않습니다.");
         }
 
-        return new UsernamePasswordAuthenticationToken(loginMember.getUsername(), loginMember.getPassword());
+        return new UsernamePasswordAuthenticationToken(loginMember, "");
     }
 
     @Override
